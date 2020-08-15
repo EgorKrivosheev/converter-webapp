@@ -1,4 +1,4 @@
-package by.grodno.krivosheev.config;
+package by.grodno.krivosheev.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 @ComponentScan(basePackages="by.grodno.krivosheev")
 @EnableWebMvc
-public class MvcConfiguration extends WebMvcConfigurerAdapter{
+public class MvcConfiguration extends WebMvcConfigurerAdapter {
 
 	@Bean
 	public ViewResolver getViewResolver(){

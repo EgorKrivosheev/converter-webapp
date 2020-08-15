@@ -1,4 +1,4 @@
-package by.grodno.krivosheev.controller;
+package by.grodno.krivosheev.controllers;
 
 import java.io.IOException;
 
@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class HomeController {
+public class ViewController {
 
 	@RequestMapping(value="/")
-	public ModelAndView test(HttpServletResponse response) throws IOException{
-		return new ModelAndView("home");
+	public ModelAndView index(HttpServletResponse response) throws IOException{
+		return new ModelAndView("index");
 	}
 }

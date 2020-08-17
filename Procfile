@@ -1,1 +1,1 @@
-web: java -jar target/dependency/webapp-runner.jar target/converter.github.io-0.1.6.war
+web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/*.war

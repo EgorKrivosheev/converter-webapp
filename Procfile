@@ -1,1 +1,1 @@
-web: java -war target/converter.github.io-0.1.1.war
+web: java -jar target/converter.github.io-0.1.3.jar

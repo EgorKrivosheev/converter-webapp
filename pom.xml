@@ -4,11 +4,11 @@
 
 	<groupId>by.grodno.krivosheev</groupId>
 	<artifactId>converter.github.io</artifactId>
-	<version>0.1.6</version>
+	<version>0.2.0</version>
 	<packaging>war</packaging>
 
 	<name>converter.github.io</name>
-	<url>https://converter-github-io.herokuapp.com/</url>
+	<url>https://converter-github.herokuapp.com/</url>
 
 	<properties>
 		<java.version>1.8</java.version>

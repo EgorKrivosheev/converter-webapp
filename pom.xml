@@ -4,7 +4,8 @@
 
 	<groupId>by.grodno.krivosheev</groupId>
 	<artifactId>converter.github.io</artifactId>
-	<version>0.1.5</version>
+	<version>0.1.6</version>
+	<packaging>war</packaging>
 
 	<name>converter.github.io</name>
 	<url>https://converter-github-io.herokuapp.com/</url>

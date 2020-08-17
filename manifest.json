@@ -1,0 +1,5 @@
+{
+  "name": "converter.github.io",
+  "description": "A barebones Java app, which can easily be deployed to Heroku.",
+  "addons": [ "heroku-springMVC-git" ]
+}

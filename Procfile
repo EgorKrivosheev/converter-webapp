@@ -1,0 +1,1 @@
+web: java -war target/converter.github.io-0.1.1.war

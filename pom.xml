@@ -4,7 +4,7 @@
 
 	<groupId>by.grodno.krivosheev</groupId>
 	<artifactId>converter.github.io</artifactId>
-	<version>0.1.1</version>
+	<version>0.1.2</version>
 	<packaging>war</packaging>
 
 	<name>converter.github.io</name>

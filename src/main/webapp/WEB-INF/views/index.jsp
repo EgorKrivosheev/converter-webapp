@@ -6,7 +6,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Converter</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="resources/style.css">
     </head>
 
     <body>
@@ -20,7 +20,7 @@
         </main>
 
         <footer>
-            <p>version: 0.2.0</p>
+            <p id="version">version: 0.2.1</p>
         </footer>
 
     </body>

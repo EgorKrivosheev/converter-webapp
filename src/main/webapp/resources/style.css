@@ -1,20 +1,43 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 html {
     width: 100%;
     height: 100%;
 }
 body {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 100%;
+    font-size: 2.5vh;
+    font-family: Georgia, serif;
     background-color: yellow;
 }
 header {
-    background-color: red;
-}
-main {
 
 }
+main {
+    flex: auto;
+    margin: 0.5em 1em;
+}
 footer {
-    background-color: green;
+
+}
+header, footer {
+    flex: 0 1 auto;
+    font-weight: bold;
+    margin: 0.5em 1em;
+}
+
+header > h1 {
+    text-shadow: red 0.025em 0 0, red 0 0.025em 0,
+        red -0.025em 0 0, red 0 -0.025em 0;
+}
+#version {
+    text-align: center;
+    text-shadow: green 0.025em 0 0, green 0 0.025em 0,
+        green -0.025em 0 0, green 0 -0.025em 0;
 }

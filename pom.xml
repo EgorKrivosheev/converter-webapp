@@ -56,9 +56,9 @@
 
 		<!-- Converter -->
 		<dependency>
-			<groupId>by.grodno.krivosheev</groupId>
+			<groupId>com.github.EgorKrivosheev</groupId>
 			<artifactId>converter</artifactId>
-			<version>0.4.0</version>
+			<version>0.4.0-pre</version>
 		</dependency>
 
 		<!-- Servlet Spec -->
@@ -75,6 +75,13 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+	</repositories>
 
 	<build>
 		<plugins>

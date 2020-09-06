@@ -20,7 +20,8 @@
         </main>
 
         <footer>
-            <p id="version">version: 0.2.1</p>
+            <a id="github" href="https://github.com/EgorKrivosheev/converter.github.io" title="github: Egor Krivosheev"></a>
+            <div id="version">version: 0.3.0</div>
         </footer>
 
     </body>

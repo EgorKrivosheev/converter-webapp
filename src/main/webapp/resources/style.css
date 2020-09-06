@@ -24,19 +24,28 @@ main {
     margin: 0.5em 1em;
 }
 footer {
-
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 header, footer {
     flex: 0 1 auto;
     font-weight: bold;
     margin: 0.5em 1em;
 }
-
 header > h1 {
     text-shadow: red 0.025em 0 0, red 0 0.025em 0,
         red -0.025em 0 0, red 0 -0.025em 0;
 }
+#github {
+    width: 1.25em;
+    background: url(images/github.svg) center /cover;
+}
+#github:hover {
+    transform: scale(1.25);
+}
 #version {
+    display: inline-block;
     text-align: center;
     text-shadow: green 0.025em 0 0, green 0 0.025em 0,
         green -0.025em 0 0, green 0 -0.025em 0;

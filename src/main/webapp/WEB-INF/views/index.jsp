@@ -1,7 +1,9 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<% page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 
-<html lang="RU">
+<html lang="EN">
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -21,7 +23,7 @@
 
         <footer>
             <a id="github" href="https://github.com/EgorKrivosheev/converter.github.io" title="github: Egor Krivosheev"></a>
-            <div id="version">version: 0.3.0</div>
+            <div id="version">version: 0.4.0</div>
         </footer>
 
     </body>

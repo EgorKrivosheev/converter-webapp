@@ -3,7 +3,7 @@ package by.grodno.krivosheev.configs;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class Initializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class InitializerConfiguration extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class[0];

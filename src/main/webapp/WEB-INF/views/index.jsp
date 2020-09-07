@@ -1,6 +1,6 @@
-<% page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<% taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 
 <html lang="EN">
@@ -23,7 +23,7 @@
 
         <footer>
             <a id="github" href="https://github.com/EgorKrivosheev/converter.github.io" title="github: Egor Krivosheev"></a>
-            <div id="version">version: 0.4.0</div>
+            <div id="version">version: 0.4.1</div>
         </footer>
 
     </body>

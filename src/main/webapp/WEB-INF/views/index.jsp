@@ -1,14 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 
 <html lang="EN">
-
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Converter</title>
         <link rel="stylesheet" href="<c:url value='/resources/style.css' />">
+        <script src="<c:url value="/resources/scripts/events.js" />"></script>
         <link rel="icon" type="image/png" sizes="16x16" href="<c:url value='/resources/images/icons/favicon-16x16.png' />">
         <link rel="icon" type="image/png" sizes="24x24" href="<c:url value='/resources/images/icons/favicon-24x24.png' />">
         <link rel="icon" type="image/png" sizes="32x32" href="<c:url value='/resources/images/icons/favicon-32x32.png' />">
@@ -35,16 +35,25 @@
     <body>
 
         <header>
-             <h1>Converter.github.io</h1>
+             <h1 class="text-shadow-red">Converter</h1>
         </header>
 
-        <main>
+        <main id="main" style="flex-direction: row;">
+
+            <textarea></textarea>
+
+            <div id="buttons" style="flex-direction: column;" class="wrap-button">
+                <button></button>
+                <button></button>
+            </div>
+
+            <textarea></textarea>
 
         </main>
 
         <footer>
             <a id="github" href="https://github.com/EgorKrivosheev/converter.github.io" title="github: Egor Krivosheev"></a>
-            <div id="version">version: 0.5.0</div>
+            <div id="version" class="text-shadow-red">version: 0.5.1</div>
         </footer>
 
     </body>

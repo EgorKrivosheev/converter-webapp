@@ -14,14 +14,17 @@ body {
     height: 100%;
     font-size: 2.5vh;
     font-family: Georgia, serif;
-    background-color: yellow;
+    background-color: red;
 }
 header {
 
 }
 main {
     flex: auto;
-    margin: 0.5em 1em;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 1em;
 }
 footer {
     display: flex;
@@ -31,9 +34,10 @@ footer {
 header, footer {
     flex: 0 1 auto;
     font-weight: bold;
-    margin: 0.5em 1em;
+    background-color: white;
+    padding: 0.5em 1em;
 }
-header > h1 {
+.text-shadow-red {
     text-shadow: red 0.025em 0 0, red 0 0.025em 0,
         red -0.025em 0 0, red 0 -0.025em 0;
 }
@@ -47,6 +51,22 @@ header > h1 {
 #version {
     display: inline-block;
     text-align: center;
-    text-shadow: green 0.025em 0 0, green 0 0.025em 0,
-        green -0.025em 0 0, green 0 -0.025em 0;
+}
+main > textarea {
+    flex: 1 1 auto;
+    resize: none;
+}
+.wrap-button {
+    flex: 0 1 5%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    vertical-align: middle;
+    margin: 0.5em;
+}
+.wrap-button > button {
+    width: 2em;
+    height: 2em;
+    font-size: 1em;
+    margin: 0.5em;
 }

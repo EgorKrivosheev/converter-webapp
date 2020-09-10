@@ -4,10 +4,12 @@ function set_flex_direction() {
 
     if (_isMobile || _clientWidth < 768) {
         document.getElementById("main").style.flexDirection="column";
-        document.getElementById("buttons").style.flexDirection="row";
+        document.getElementById("menu").style.flexDirection="row";
+        document.getElementById("convert").classList.add("rotate");
     } else {
         document.getElementById("main").style.flexDirection="row";
-        document.getElementById("buttons").style.flexDirection="column";
+        document.getElementById("menu").style.flexDirection="column";
+        document.getElementById("convert").classList.remove("rotate");
     }
 }
 

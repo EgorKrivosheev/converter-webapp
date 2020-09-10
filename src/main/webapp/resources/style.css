@@ -1,6 +1,8 @@
 * {
     padding: 0;
     margin: 0;
+    border: 0;
+    user-select: none;
     box-sizing: border-box;
 }
 html {
@@ -14,6 +16,7 @@ body {
     height: 100%;
     font-size: 2.5vh;
     font-family: Georgia, serif;
+    line-height: 1;
     background-color: red;
 }
 header {
@@ -42,31 +45,56 @@ header, footer {
         red -0.025em 0 0, red 0 -0.025em 0;
 }
 #github {
-    width: 1.25em;
-    background: url(images/github.svg) center /cover;
+    width: 1em;
+    background: url(images/github.svg) center /cover no-repeat content-box padding-box transparent;
 }
-#github:hover {
+#github:hover, button:hover {
     transform: scale(1.25);
 }
 #version {
     display: inline-block;
     text-align: center;
 }
-main > textarea {
+main > .wrap {
     flex: 1 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+}
+label, .label {
+    flex: 0 1 auto;
+    margin-bottom: 0.25em;
+}
+textarea {
+    flex: 1 1 auto;
+    font-size: 1em;
+    font-family: inherit;
     resize: none;
 }
-.wrap-button {
-    flex: 0 1 5%;
+.wrap-menu {
+    flex: 0 1 auto;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     vertical-align: middle;
     margin: 0.5em;
 }
-.wrap-button > button {
+.wrap-menu > * {
+    margin: 0.5em;
+}
+.wrap-menu > .btn-convert {
+    display: block;
+    text-align: center;
+    vertical-align: middle;
     width: 2em;
     height: 2em;
     font-size: 1em;
-    margin: 0.5em;
+    line-height: 1;
+    background: url(images/arrow.svg) center /cover no-repeat;
+    border: 0;
+}
+.rotate {
+    transform: rotate(90deg);
+}
+button.rotate:hover {
+    transform: rotate(90deg) scale(1.25);
 }

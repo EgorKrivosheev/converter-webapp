@@ -6,7 +6,13 @@
 <html lang="EN">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="height=device-height, initial-scale=1.0, minimum-scale=1.0" />
+        <meta name="MobileOptimized" content="width" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <title>Converter</title>
+        <meta name="description" content="Converter JSON, XML" />
+        <link rel="canonical" href="https://converter-github.herokuapp.com/" />
         <link rel="stylesheet" href="<c:url value='/resources/style.css' />">
         <script src="<c:url value="/resources/scripts/events.js" />"></script>
         <link rel="icon" type="image/png" sizes="16x16" href="<c:url value='/resources/images/icons/favicon-16x16.png' />">
@@ -30,6 +36,12 @@
         <link rel="icon" type="image/png" sizes="512x512" href="<c:url value='/resources/images/icons/favicon-512x512.png' />">
         <link rel="shortcut icon" type="image/x-icon" href="<c:url value='/resources/images/icons/favicon.ico' />">
         <link rel="shortcut icon" type="image/svg+xml" href="<c:url value='/resources/images/icons/favicon.svg' />">
+        <meta property="og:title" content="Converter" />
+        <meta property="og:site_name" content="converter-github.herokuapp.com" />
+        <meta property="og:url" content="https://converter-github.herokuapp.com/" />
+        <meta property="og:description" content="Converter JSON, XML" />
+        <meta property="og:image" content="<c:url value='/resources/images/icons/favicon-512x512.png' />" />
+        <meta property="og:locale" content="EN" />
     </head>
 
     <body>
@@ -40,20 +52,32 @@
 
         <main id="main" style="flex-direction: row;">
 
-            <textarea></textarea>
-
-            <div id="buttons" style="flex-direction: column;" class="wrap-button">
-                <button></button>
-                <button></button>
+            <div class="wrap">
+                <div class="label">Input text type:
+                    <label for="type-JSON">
+                        <input id="type-JSON" type="radio" name="type-text" value="JSON" checked> JSON
+                    </label>
+                    <label for="type-XML">
+                        <input id="type-XML" type="radio" name="type-text" value="XML"> XML
+                    </label>
+                </div>
+                <textarea aria-label="Input text"></textarea>
             </div>
 
-            <textarea></textarea>
+            <div id="menu" style="flex-direction: column;" class="wrap-menu">
+                <button id="convert" class="btn-convert" aria-label="Convert" title="Convert"></button>
+            </div>
+
+            <div class="wrap">
+                <label>Output text</label>
+                <textarea aria-label="Output text"></textarea>
+            </div>
 
         </main>
 
         <footer>
             <a id="github" href="https://github.com/EgorKrivosheev/converter.github.io" title="github: Egor Krivosheev"></a>
-            <div id="version" class="text-shadow-red">version: 0.5.1</div>
+            <div id="version" class="text-shadow-red">version: 0.5.2</div>
         </footer>
 
     </body>

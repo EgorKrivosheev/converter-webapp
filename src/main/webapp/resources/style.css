@@ -56,11 +56,11 @@ header, footer {
     text-align: center;
 }
 main > .wrap {
-    flex: 1 1 auto;
+    flex: 1 1 0;
     display: flex;
     flex-flow: column nowrap;
 }
-label, .label {
+.label {
     flex: 0 1 auto;
     margin-bottom: 0.25em;
 }

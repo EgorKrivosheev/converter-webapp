@@ -34,7 +34,7 @@
         <link rel="icon" type="image/png" sizes="192x192"  href="<c:url value='/resources/images/icons/android-icon-192x192.png' />">
         <link rel="icon" type="image/png" sizes="384x384" href="<c:url value='/resources/images/icons/favicon-384x384.png' />">
         <link rel="icon" type="image/png" sizes="512x512" href="<c:url value='/resources/images/icons/favicon-512x512.png' />">
-        <link rel="shortcut icon" type="image/x-icon" href="<c:url value='/resources/images/icons/favicon.ico' />">
+        <link rel="shortcut icon" type="image/x-icon" href="<c:url value='/favicon.ico' />">
         <link rel="shortcut icon" type="image/svg+xml" href="<c:url value='/resources/images/icons/favicon.svg' />">
         <meta property="og:title" content="Converter" />
         <meta property="og:site_name" content="converter-github.herokuapp.com" />
@@ -69,15 +69,17 @@
             </div>
 
             <div class="wrap">
-                <label>Output text</label>
-                <textarea aria-label="Output text"></textarea>
+                <div class="label">Output text
+                    <label></label>
+                </div>
+                <textarea readonly aria-label="Output text"></textarea>
             </div>
 
         </main>
 
         <footer>
             <a id="github" href="https://github.com/EgorKrivosheev/converter.github.io" title="github: Egor Krivosheev"></a>
-            <div id="version" class="text-shadow-red">version: 0.5.2</div>
+            <div id="version" class="text-shadow-red">version: 0.5.3</div>
         </footer>
 
     </body>

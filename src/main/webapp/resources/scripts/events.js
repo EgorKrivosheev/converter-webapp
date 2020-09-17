@@ -1,3 +1,5 @@
+'use strict';
+
 function set_flex_direction() {
     let _isMobile = /Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(navigator.userAgent);
     let _clientWidth = document.documentElement.clientWidth;

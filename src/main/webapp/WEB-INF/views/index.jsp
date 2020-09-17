@@ -1,13 +1,12 @@
-<%@ page contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 
-<html lang="EN">
+<html lang="EN" ng-app="converterApp">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="height=device-height, initial-scale=1.0, minimum-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
         <meta name="MobileOptimized" content="width" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <title>Converter</title>
@@ -44,7 +43,7 @@
         <meta property="og:locale" content="EN" />
     </head>
 
-    <body>
+    <body ng-controller="rootController">
 
         <header>
              <h1 class="text-shadow-red">Converter</h1>
@@ -55,10 +54,10 @@
             <div class="wrap">
                 <div class="label">Input text type:
                     <label for="type-JSON">
-                        <input id="type-JSON" type="radio" name="type-text" value="JSON" checked> JSON
+                        <input id="type-JSON" type="radio" name="type-text" value="JSON" checked ng-model="in_text_type"> JSON
                     </label>
                     <label for="type-XML">
-                        <input id="type-XML" type="radio" name="type-text" value="XML"> XML
+                        <input id="type-XML" type="radio" name="type-text" value="XML" ng-model="in_text_type"> XML
                     </label>
                 </div>
                 <textarea aria-label="Input text"></textarea>
@@ -70,7 +69,7 @@
 
             <div class="wrap">
                 <div class="label">Output text
-                    <label></label>
+                    <label ng-bind="out_text_type"></label>
                 </div>
                 <textarea readonly aria-label="Output text"></textarea>
             </div>
@@ -79,9 +78,13 @@
 
         <footer>
             <a id="github" href="https://github.com/EgorKrivosheev/converter.github.io" title="github: Egor Krivosheev"></a>
-            <div id="version" class="text-shadow-red">version: 0.5.3</div>
+            <div id="version" class="text-shadow-red">{{ version }}</div>
         </footer>
 
     </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="<c:url value="/resources/scripts/converterApp.js" />"></script>
+    <script src="<c:url value="/resources/scripts/controllers/rootController.js" />"></script>
 
 </html>

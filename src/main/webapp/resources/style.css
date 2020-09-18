@@ -98,3 +98,11 @@ textarea {
 button.rotate:hover {
     transform: rotate(90deg) scale(1.25);
 }
+.close {
+    cursor: not-allowed;
+    background-color: gray;
+    user-select: none;
+}
+button.btn-close {
+    cursor: not-allowed;
+}

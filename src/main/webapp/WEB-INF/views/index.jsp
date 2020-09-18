@@ -52,26 +52,23 @@
         <main id="main" style="flex-direction: row;">
 
             <div class="wrap">
-                <div class="label">Input text type:
-                    <label for="type-JSON">
-                        <input id="type-JSON" type="radio" name="type-text" value="JSON" checked ng-model="in_text_type"> JSON
-                    </label>
-                    <label for="type-XML">
-                        <input id="type-XML" type="radio" name="type-text" value="XML" ng-model="in_text_type"> XML
+                <div class="label" >Input text type:
+                    <label ng-repeat="radio in types">
+                        <input type="radio" name="types" value="{{ radio.value }}" ng-model="check.type" />
+                        {{ radio.value }}
                     </label>
                 </div>
                 <textarea aria-label="Input text"></textarea>
             </div>
 
             <div id="menu" style="flex-direction: column;" class="wrap-menu">
-                <button id="convert" class="btn-convert" aria-label="Convert" title="Convert"></button>
+                <button id="convert" class="btn-convert" aria-label="Convert" title="Convert" ng-class="setClassConvertBtn"></button>
             </div>
 
             <div class="wrap">
-                <div class="label">Output text
-                    <label ng-bind="out_text_type"></label>
+                <div class="label">{{ setOutType() }}
                 </div>
-                <textarea readonly aria-label="Output text"></textarea>
+                <textarea readonly aria-label="Output text" ng-class="setClassOutTextarea"></textarea>
             </div>
 
         </main>

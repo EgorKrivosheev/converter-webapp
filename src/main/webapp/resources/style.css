@@ -48,7 +48,7 @@ header, footer {
     width: 1em;
     background: url(images/github.svg) center /cover no-repeat content-box padding-box transparent;
 }
-#github:hover, button:hover {
+#github:hover, button:not(.btn-close):hover {
     transform: scale(1.25);
 }
 #version {
@@ -105,4 +105,7 @@ button.rotate:hover {
 }
 button.btn-close {
     cursor: not-allowed;
+}
+button.btn-close.rotate:hover {
+    transform: rotate(90deg) !important;
 }

@@ -29,6 +29,9 @@ main {
     justify-content: space-between;
     margin: 1em;
 }
+#main.mobile {
+    flex-direction: column;
+}
 footer {
     display: flex;
     flex-flow: row nowrap;
@@ -73,10 +76,14 @@ textarea {
 .wrap-menu {
     flex: 0 1 auto;
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     vertical-align: middle;
     margin: 0.5em;
+}
+#main.mobile #menu {
+    flex-direction: row;
 }
 .wrap-menu > * {
     margin: 0.5em;
@@ -92,10 +99,10 @@ textarea {
     background: url(images/arrow.svg) center /cover no-repeat;
     border: 0;
 }
-.rotate {
+#main.mobile #convert {
     transform: rotate(90deg);
 }
-button.rotate:hover {
+#main.mobile button:hover {
     transform: rotate(90deg) scale(1.25);
 }
 .close {
@@ -106,6 +113,6 @@ button.rotate:hover {
 button.btn-close {
     cursor: not-allowed;
 }
-button.btn-close.rotate:hover {
+#main.mobile button.btn-close:hover {
     transform: rotate(90deg) !important;
 }

@@ -49,7 +49,7 @@
              <h1 class="text-shadow-red">Converter</h1>
         </header>
 
-        <main id="main" style="flex-direction: row;">
+        <main id="main">
 
             <div class="wrap">
                 <div class="label" >Input text type:
@@ -61,7 +61,7 @@
                 <textarea aria-label="Input text"></textarea>
             </div>
 
-            <div id="menu" style="flex-direction: column;" class="wrap-menu">
+            <div id="menu" class="wrap-menu">
                 <button id="convert" class="btn-convert" aria-label="Convert" title="Convert" ng-class="setClassConvertBtn"></button>
             </div>
 

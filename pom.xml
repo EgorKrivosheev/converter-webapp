@@ -5,7 +5,7 @@
 
 	<groupId>by.grodno.krivosheev</groupId>
 	<artifactId>converter.github.io</artifactId>
-	<version>0.6.2</version>
+	<version>0.6.3</version>
 	<packaging>war</packaging>
 
 	<name>converter.github.io</name>
@@ -59,6 +59,7 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- TagLibs Dependency -->
 		<dependency>
 			<groupId>taglibs</groupId>
 			<artifactId>standard</artifactId>

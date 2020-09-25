@@ -3,15 +3,12 @@
 function setFlexDirection() {
     let _isMobile = /Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(navigator.userAgent);
     let _clientWidth = document.documentElement.clientWidth;
+    let _main = document.getElementById("main");
 
     if (_isMobile || _clientWidth < 768) {
-        document.getElementById("main").style.flexDirection="column";
-        document.getElementById("menu").style.flexDirection="row";
-        document.getElementById("convert").classList.add("rotate");
+        _main.classList.add('mobile');
     } else {
-        document.getElementById("main").style.flexDirection="row";
-        document.getElementById("menu").style.flexDirection="column";
-        document.getElementById("convert").classList.remove("rotate");
+        _main.classList.remove("mobile");
     }
 }
 

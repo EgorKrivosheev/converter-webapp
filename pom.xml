@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>by.grodno.krivosheev</groupId>
-	<artifactId>converter.github.io</artifactId>
-	<version>0.6.4</version>
+	<artifactId>converter.app</artifactId>
+	<version>0.6.5</version>
 	<packaging>war</packaging>
 
-	<name>converter.github.io</name>
-	<url>https://converter-github.herokuapp.com/</url>
+	<name>converter.app</name>
+	<url>https://convert3r.herokuapp.com/</url>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>

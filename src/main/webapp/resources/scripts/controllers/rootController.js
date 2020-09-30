@@ -1,7 +1,6 @@
 'use strict';
 
-_CONVERTER_APP.controller("rootController", function ($scope) {
-
+_CONVERTER_APP.controller("rootController", ['$scope', 'converterService', function ($scope, converterService) {
     $scope.check = {};
     $scope.types = [{
         value: "JSON"
@@ -25,5 +24,19 @@ _CONVERTER_APP.controller("rootController", function ($scope) {
             return "Select input text type";
         }
     };
-
-});
+    $scope.inpTextarea = "";
+    $scope.outTextarea = "";
+    $scope.convert = function convert() {
+        if ($scope.check.type === "JSON" || $scope.check.type === "XML") {
+            $scope.outTextarea = converterService.convert($scope.check.type, $scope.inpTextarea)
+                .then(
+                    function (success){
+                        $scope.outTextarea = success.data.response;
+                    },
+                    function (error) {
+                        $scope.outTextarea = error.data.response;
+                    }
+                );
+        }
+    };
+}]);

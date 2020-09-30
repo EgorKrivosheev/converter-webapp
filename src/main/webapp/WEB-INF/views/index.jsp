@@ -58,17 +58,17 @@
                         {{ radio.value }}
                     </label>
                 </div>
-                <textarea aria-label="Input text"></textarea>
+                <textarea aria-label="Input text" ng-model="inpTextarea"></textarea>
             </div>
 
             <div id="menu" class="wrap-menu">
-                <button id="convert" class="btn-convert" aria-label="Convert" title="Convert" ng-class="setClassConvertBtn"></button>
+                <button id="convert" class="btn-convert" aria-label="Convert" title="Convert" ng-class="setClassConvertBtn" ng-click="convert()"></button>
             </div>
 
             <div class="wrap">
                 <div class="label">{{ setOutType() }}
                 </div>
-                <textarea readonly aria-label="Output text" ng-class="setClassOutTextarea"></textarea>
+                <textarea readonly aria-label="Output text" ng-class="setClassOutTextarea" ng-model="outTextarea"></textarea>
             </div>
 
         </main>
@@ -82,6 +82,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
     <script src="<c:url value="/resources/scripts/converterApp.js" />"></script>
+    <script src="<c:url value="/resources/scripts/services/converterService.js" />"></script>
     <script src="<c:url value="/resources/scripts/controllers/rootController.js" />"></script>
-
 </html>

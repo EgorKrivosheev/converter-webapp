@@ -8,6 +8,10 @@ public class ConverterModel extends AbstractModel {
         this.typeResponse = typeResponse;
     }
 
+    public String getTypeResponse() {
+        return typeResponse;
+    }
+
     @Override
     public String toString() {
         return "{ \"type_response\": " + typeResponse + ", \"response\": " + this.getResponse() + " }";

@@ -10,7 +10,7 @@ public abstract class AbstractModel {
         this.response = str;
     }
 
-    protected String getResponse() {
+    public String getResponse() {
         return response;
     }
 

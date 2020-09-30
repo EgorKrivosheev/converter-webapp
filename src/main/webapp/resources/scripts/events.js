@@ -1,6 +1,6 @@
 'use strict';
 
-function setFlexDirection() {
+function setMobileVersion() {
     let _isMobile = /Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(navigator.userAgent);
     let _clientWidth = document.documentElement.clientWidth;
     let _main = document.getElementById("main");
@@ -13,9 +13,9 @@ function setFlexDirection() {
 }
 
 window.onload = function() {
-    setFlexDirection();
+    setMobileVersion();
 };
 
 window.onresize = function() {
-    setFlexDirection();
+    setMobileVersion();
 };

@@ -36,5 +36,6 @@ public class MvcConfiguration implements WebMvcConfigurer {
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 		registry.addResourceHandler("/favicon.ico").addResourceLocations("/favicon.ico");
+		registry.addResourceHandler("/manifest.json").addResourceLocations("/manifest.json");
 	}
 }

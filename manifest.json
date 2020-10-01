@@ -1,5 +1,0 @@
-{
-  "name": "Converter-app",
-  "description": "A barebones Java app, which can easily be deployed to Heroku.",
-  "addons": [ "heroku-git-spring-web-mvc" ]
-}

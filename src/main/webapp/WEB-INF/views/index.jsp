@@ -35,6 +35,7 @@
         <link rel="icon" type="image/png" sizes="512x512" href="<c:url value='/resources/images/icons/favicon-512x512.png' />">
         <link rel="shortcut icon" type="image/x-icon" href="<c:url value='/favicon.ico' />">
         <link rel="shortcut icon" type="image/svg+xml" href="<c:url value='/resources/images/icons/favicon.svg' />">
+        <link rel="manifest" href="<c:url value='/manifest.json' />">
         <meta property="og:title" content="Converter" />
         <meta property="og:site_name" content="convert3r.herokuapp.com" />
         <meta property="og:url" content="https://convert3r.herokuapp.com/" />

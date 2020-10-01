@@ -73,6 +73,7 @@ textarea {
     font-size: 1em;
     font-family: inherit;
     resize: none;
+    padding: 1em;
 }
 .wrap-menu {
     flex: 0 1 auto;
@@ -116,4 +117,10 @@ button.btn-close {
 }
 #main.mobile button.btn-close:hover {
     transform: rotate(90deg) !important;
+}
+.success {
+    color: green;
+}
+.error {
+    color: red;
 }

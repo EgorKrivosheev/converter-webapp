@@ -7,20 +7,18 @@ _CONVERTER_APP.controller("rootController", ['$scope', 'converterService', funct
     }, {
         value: "XML"
     }];
+    $scope.isSuccessOrError = true; // true = success request, false = request error
     $scope.setOutType = function () {
-        if ($scope.check.type === "JSON") {
-            $scope.setClassOutTextarea = "";
+        if ($scope.check.type === "JSON" || $scope.check.type === "XML") {
+            $scope.setClassOutTextarea = $scope.isSuccessOrError ? "success" : "error";
             $scope.setClassConvertBtn = "";
-            return "Output text type XML";
-        }
-        else if ($scope.check.type === "XML") {
-            $scope.setClassOutTextarea = "";
-            $scope.setClassConvertBtn = "";
-            return "Output text type JSON";
+            $scope.placeholderInpTextarea = "Input " + $scope.check.type + " text";
+            return "Output text type " + ($scope.check.type === "JSON" ? "XML" : "JSON");
         }
         else {
             $scope.setClassOutTextarea = "close";
             $scope.setClassConvertBtn = "btn-close";
+            $scope.placeholderInpTextarea = "Select input text type";
             return "Select input text type";
         }
     };
@@ -31,9 +29,11 @@ _CONVERTER_APP.controller("rootController", ['$scope', 'converterService', funct
             $scope.outTextarea = converterService.convert($scope.check.type, $scope.inpTextarea)
                 .then(
                     function (success){
+                        $scope.isSuccessOrError = true;
                         $scope.outTextarea = success.data.response;
                     },
                     function (error) {
+                        $scope.isSuccessOrError = false;
                         $scope.outTextarea = error.data.response;
                     }
                 );

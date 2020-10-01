@@ -11,7 +11,7 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <title>Converter</title>
         <meta name="description" content="Converter JSON, XML" />
-        <link rel="canonical" href="https://converter-github.herokuapp.com/" />
+        <link rel="canonical" href="https://convert3r.herokuapp.com/" />
         <link rel="stylesheet" href="<c:url value='/resources/style.css' />">
         <script src="<c:url value="/resources/scripts/events.js" />"></script>
         <link rel="icon" type="image/png" sizes="16x16" href="<c:url value='/resources/images/icons/favicon-16x16.png' />">
@@ -36,21 +36,19 @@
         <link rel="shortcut icon" type="image/x-icon" href="<c:url value='/favicon.ico' />">
         <link rel="shortcut icon" type="image/svg+xml" href="<c:url value='/resources/images/icons/favicon.svg' />">
         <meta property="og:title" content="Converter" />
-        <meta property="og:site_name" content="converter-github.herokuapp.com" />
-        <meta property="og:url" content="https://converter-github.herokuapp.com/" />
+        <meta property="og:site_name" content="convert3r.herokuapp.com" />
+        <meta property="og:url" content="https://convert3r.herokuapp.com/" />
         <meta property="og:description" content="Converter JSON, XML" />
         <meta property="og:image" content="<c:url value='/resources/images/icons/favicon-512x512.png' />" />
         <meta property="og:locale" content="EN" />
     </head>
 
     <body ng-controller="rootController">
-
         <header>
              <h1 class="text-shadow-red">Converter</h1>
         </header>
 
         <main id="main">
-
             <div class="wrap">
                 <div class="label" >Input text type:
                     <label ng-repeat="radio in types">
@@ -58,7 +56,7 @@
                         {{ radio.value }}
                     </label>
                 </div>
-                <textarea aria-label="Input text" ng-model="inpTextarea"></textarea>
+                <textarea aria-label="Input text" placeholder="{{ placeholderInpTextarea }}" ng-model="inpTextarea"></textarea>
             </div>
 
             <div id="menu" class="wrap-menu">
@@ -70,14 +68,12 @@
                 </div>
                 <textarea readonly aria-label="Output text" ng-class="setClassOutTextarea" ng-model="outTextarea"></textarea>
             </div>
-
         </main>
 
         <footer>
             <a id="github" href="https://github.com/EgorKrivosheev/converter.github.io" title="github: Egor Krivosheev"></a>
             <div id="version" class="text-shadow-red">{{ version }}</div>
         </footer>
-
     </body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>

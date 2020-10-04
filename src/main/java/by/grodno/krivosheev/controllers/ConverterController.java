@@ -37,10 +37,14 @@ public class ConverterController {
                 return "Empty object!";
             }
         };
-        if (type.equals("JSON")) {
-            obj = Converter.toJSON(Parser.getObjectXML(source));
-        } else if (type.equals("XML")) {
-            obj = Converter.toXML(Parser.getObjectJSON(source));
+        try {
+            if (type.equals("JSON")) {
+                obj = Converter.toJSON(Parser.getObjectXML(source));
+            } else if (type.equals("XML")) {
+                obj = Converter.toXML(Parser.getObjectJSON(source));
+            }
+        } catch (Exception e) {
+            return new ResponseEntity<>(new ErrorModel((short) 400, e.getMessage()), HttpStatus.CONFLICT);
         }
         if (obj.toString().equals("Empty object!")) return new ResponseEntity<>(new ErrorModel((short) 400, "Input text incorrect!"), HttpStatus.CONFLICT);
         return new ResponseEntity<>(new ConverterModel(type, obj.toString()), HttpStatus.OK);

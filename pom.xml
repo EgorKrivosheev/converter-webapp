@@ -5,7 +5,7 @@
 
 	<groupId>by.grodno.krivosheev</groupId>
 	<artifactId>converter.app</artifactId>
-	<version>0.7.3</version>
+	<version>0.8.0</version>
 	<packaging>war</packaging>
 
 	<name>converter.app</name>
@@ -38,7 +38,7 @@
 		<dependency>
 			<groupId>com.github.EgorKrivosheev</groupId>
 			<artifactId>converter</artifactId>
-			<version>0.5.1-pre</version>
+			<version>0.5.2-pre</version>
 		</dependency>
 
 		<!-- Servlet Dependency -->

@@ -44,7 +44,7 @@ public class ConverterController {
                 obj = Converter.toXML(Parser.getObjectJSON(source));
             }
         } catch (Exception e) {
-            return new ResponseEntity<>(new ErrorModel((short) 409, e.getMessage()), HttpStatus.CONFLICT);
+            return new ResponseEntity<>(new ErrorModel((short) 409, e.getMessage() == null ? "Error!!! Input text incorrect!" : e.getMessage()), HttpStatus.CONFLICT);
         }
         if (obj.toString().equals("Empty object!")) return new ResponseEntity<>(new ErrorModel((short) 409, "Input text incorrect!"), HttpStatus.CONFLICT);
         return new ResponseEntity<>(new ConverterModel(type, obj.toString()), HttpStatus.OK);

@@ -72,7 +72,7 @@
         </main>
 
         <footer>
-            <a id="github" href="https://github.com/EgorKrivosheev/converter.github.io" title="github: Egor Krivosheev"></a>
+            <a id="github" href="https://github.com/EgorKrivosheev/converter.app" title="github: Egor Krivosheev"></a>
             <div id="version" class="text-shadow-red">{{ version }}</div>
         </footer>
     </body>

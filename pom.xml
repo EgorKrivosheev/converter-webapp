@@ -5,7 +5,7 @@
 
 	<groupId>by.grodno.krivosheev</groupId>
 	<artifactId>converter.app</artifactId>
-	<version>0.8.2</version>
+	<version>0.8.3</version>
 	<packaging>war</packaging>
 
 	<name>converter.app</name>
@@ -75,7 +75,7 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.9.10.6</version>
+			<version>2.12.1</version>
 		</dependency>
 	</dependencies>
 

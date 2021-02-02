@@ -68,6 +68,10 @@ main > .wrap {
     font-weight: bold;
     margin-bottom: 0.25em;
 }
+.label input {
+    width: 2.5vh;
+    height: 2.5vh;
+}
 textarea {
     flex: 1 1 auto;
     font-size: 1em;

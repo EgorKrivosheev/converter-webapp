@@ -5,7 +5,7 @@
 
 	<groupId>by.grodno.krivosheev</groupId>
 	<artifactId>converter.app</artifactId>
-	<version>0.8.3</version>
+	<version>0.9.0</version>
 	<packaging>war</packaging>
 
 	<name>converter.app</name>
@@ -26,19 +26,12 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<version>${spring.version}</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
 
 		<!-- Converter -->
 		<dependency>
 			<groupId>com.github.EgorKrivosheev</groupId>
 			<artifactId>converter</artifactId>
-			<version>0.5.3-pre</version>
+			<version>0.6.2-pre</version>
 		</dependency>
 
 		<!-- Servlet Dependency -->

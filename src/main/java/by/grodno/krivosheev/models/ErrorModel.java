@@ -11,9 +11,4 @@ public class ErrorModel extends AbstractModel {
     public short getCodeError() {
         return codeError;
     }
-
-    @Override
-    public String toString() {
-        return "{ \"codeError\": " + codeError + ", \"response\": " + this.getResponse() + " }";
-    }
 }

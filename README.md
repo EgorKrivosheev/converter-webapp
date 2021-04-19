@@ -1,8 +1,13 @@
-# converter.app
+# Converter webapp
+`Spring web MVC`, `Jackson`
 
-Spring-webMVC, [converter](https://github.com/EgorKrivosheev/converter "Egor Krivosheev / converter").
+**Build:** `maven`
 
-### Web-app java converter text:
+**Deploy:** `Heroku`
 
-    JSON -> XML;
-    XML -> JSON.
+## Links
+[Converter](https://github.com/EgorKrivosheev/converter "EgorKrivosheev/converter"),
+[Website](https://convert3r.herokuapp.com/ "convert3r.herokuapp.com")
+
+### License
+[MIT](https://github.com/EgorKrivosheev/converter.app/blob/master/LICENSE)

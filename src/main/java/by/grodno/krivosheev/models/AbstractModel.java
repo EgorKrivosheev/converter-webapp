@@ -13,6 +13,4 @@ public abstract class AbstractModel {
     public String getResponse() {
         return response;
     }
-
-    public abstract String toString();
 }

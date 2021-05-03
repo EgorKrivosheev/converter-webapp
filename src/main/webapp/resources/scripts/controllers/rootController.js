@@ -7,23 +7,26 @@ _CONVERTER_APP.controller("rootController", ['$scope', 'converterService', funct
     }, {
         value: "XML"
     }];
-    $scope.isSuccessOrError = true; // true = success request, false = request error
-    $scope.setOutType = function () {
-        if ($scope.check.type === "JSON" || $scope.check.type === "XML") {
-            $scope.setClassOutTextarea = $scope.isSuccessOrError ? "success" : "error";
-            $scope.setClassConvertBtn = "";
-            $scope.placeholderInpTextarea = "Input " + $scope.check.type + " text";
-            return "Output text type " + ($scope.check.type === "JSON" ? "XML" : "JSON");
-        }
-        else {
-            $scope.setClassOutTextarea = "close";
-            $scope.setClassConvertBtn = "btn-close";
-            $scope.placeholderInpTextarea = "Select input text type";
-            return "Select input text type";
-        }
-    };
     $scope.inpTextarea = "";
     $scope.outTextarea = "";
+    $scope.isSuccessOrError = true; // true = success request, false = request error
+
+    $scope.setOutType = function () {
+        if ($scope.check.type === "JSON" || $scope.check.type === "XML") {
+            $scope.setClassOutTextarea = $scope.isSuccessOrError ?
+                "success" :
+                "error";
+            $scope.setClassConvertBtn = "";
+            $scope.placeholderInpTextarea = "Input " + $scope.check.type + " text";
+            return "Output text type " + ($scope.check.type === "JSON" ?
+                "XML" :
+                "JSON");
+        }
+        $scope.setClassOutTextarea = "close";
+        $scope.setClassConvertBtn = "btn-close";
+        $scope.placeholderInpTextarea = "Select input text type";
+        return "Select input text type";
+    };
     $scope.convert = function convert() {
         if ($scope.check.type === "JSON" || $scope.check.type === "XML") {
             $scope.outTextarea = converterService.convert($scope.check.type, $scope.inpTextarea)

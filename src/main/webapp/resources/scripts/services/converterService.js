@@ -7,10 +7,13 @@ _CONVERTER_APP.service("converterService", ['$http', '$q', function ($http, $q) 
 
     function convert(type, str) {
         let defer = $q.defer();
-        let url_API;
+        let url_API = "API/";
 
-        if (type === "JSON") url_API = "toXML";
-        else if (type === "XML") url_API = "toJSON";
+        if (type === "JSON") {
+            url_API += "toXML";
+        } else if (type === "XML") {
+            url_API += "toJSON";
+        }
         $http.get(url_API, { params: { source: str } })
             .then(
                 function (success) {

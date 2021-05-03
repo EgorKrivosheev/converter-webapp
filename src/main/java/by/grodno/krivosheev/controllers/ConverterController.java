@@ -12,20 +12,18 @@ import org.jetbrains.annotations.NotNull;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping(value = "/API", produces = "application/json")
 public class ConverterController {
 
-    @RequestMapping(value = "/toJSON", method = RequestMethod.GET, produces = "application/json")
+    @GetMapping(value = "/toJSON")
     public ResponseEntity<AbstractModel> toJSON(@RequestParam(value = "source") @NotNull String source) {
         return responseEntity("JSON", source);
     }
 
-    @RequestMapping(value = "/toXML", method = RequestMethod.GET, produces = "application/json")
+    @GetMapping(value = "/toXML")
     public ResponseEntity<AbstractModel> toXML(@RequestParam(value = "source") @NotNull String source) {
         return responseEntity("XML", source);
     }
@@ -44,7 +42,7 @@ public class ConverterController {
             }
         } catch (Exception e) {
             return new ResponseEntity<>(new ErrorModel((short) 409, e.getMessage() == null ?
-                    "Error!!! Input text incorrect!" :
+                    "Input text incorrect!" :
                     e.getMessage()), HttpStatus.CONFLICT);
         }
         if (obj == null || obj.isEmpty()) {

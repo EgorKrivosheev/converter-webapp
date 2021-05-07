@@ -109,7 +109,7 @@ textarea {
     transform: rotate(90deg);
 }
 #main.mobile button:hover {
-    transform: rotate(90deg) scale(1.25);
+    transform: rotate(90deg) scale(1.25) !important;
 }
 .close {
     cursor: not-allowed;
@@ -127,4 +127,12 @@ button.btn-close {
 }
 .error {
     color: red;
+}
+/* Custom scrollbar */
+.custom-scroll::-webkit-scrollbar {
+    width: 0.5em;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+    background-color: red;
+    border: 1px solid black;
 }

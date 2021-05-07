@@ -57,7 +57,7 @@
                         {{ radio.value }}
                     </label>
                 </div>
-                <textarea aria-label="Input text" placeholder="{{ placeholderInpTextarea }}" ng-model="inpTextarea"></textarea>
+                <textarea class="custom-scroll" aria-label="Input text" placeholder="{{ placeholderInpTextarea }}" ng-model="inpTextarea"></textarea>
             </div>
 
             <div id="menu" class="wrap-menu">
@@ -67,7 +67,7 @@
             <div class="wrap">
                 <div class="label">{{ setOutType() }}
                 </div>
-                <textarea readonly aria-label="Output text" ng-class="setClassOutTextarea" ng-model="outTextarea"></textarea>
+                <textarea readonly class="custom-scroll" aria-label="Output text" ng-class="setClassOutTextarea" ng-model="outTextarea"></textarea>
             </div>
         </main>
 

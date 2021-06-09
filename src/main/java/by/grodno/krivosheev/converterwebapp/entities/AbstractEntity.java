@@ -1,12 +1,12 @@
-package by.grodno.krivosheev.models;
+package by.grodno.krivosheev.converterwebapp.entities;
 
 /**
  * Abstract class for create new model
  */
-public abstract class AbstractModel {
+public abstract class AbstractEntity {
     private final String response;
 
-    public AbstractModel(String str) {
+    public AbstractEntity(String str) {
         this.response = str;
     }
 

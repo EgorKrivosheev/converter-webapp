@@ -1,9 +1,9 @@
-package by.grodno.krivosheev.models;
+package by.grodno.krivosheev.converterwebapp.entities;
 
-public class ErrorModel extends AbstractModel {
+public class ErrorEntity extends AbstractEntity {
     private final short codeError;
 
-    public ErrorModel(short code, String response) {
+    public ErrorEntity(short code, String response) {
         super(response);
         this.codeError = code;
     }

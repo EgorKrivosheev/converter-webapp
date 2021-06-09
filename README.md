@@ -1,5 +1,5 @@
 # Converter webapp
-`Java: 8`, `Spring web MVC`, `Jackson`
+`Java: 8`, `Spring Boot (Web)`
 
 **Build:** `maven`
 
@@ -10,4 +10,4 @@
 [Website](https://convert3r.herokuapp.com/ "convert3r.herokuapp.com")
 
 # License
-[MIT](https://github.com/EgorKrivosheev/converter.app/blob/master/LICENSE)
+[MIT](https://github.com/EgorKrivosheev/converter-webapp/blob/master/LICENSE)

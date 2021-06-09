@@ -1,10 +1,11 @@
-package by.grodno.krivosheev.controllers;
+package by.grodno.krivosheev.converterwebapp.controllers;
+
+import by.grodno.krivosheev.converterwebapp.entities.AbstractEntity;
+import by.grodno.krivosheev.converterwebapp.entities.ConverterEntity;
+import by.grodno.krivosheev.converterwebapp.entities.ErrorEntity;
 
 import by.grodno.krivosheev.core.AbstractObject;
 import by.grodno.krivosheev.core.Converter;
-import by.grodno.krivosheev.models.AbstractModel;
-import by.grodno.krivosheev.models.ConverterModel;
-import by.grodno.krivosheev.models.ErrorModel;
 import by.grodno.krivosheev.objects.JsonObject;
 import by.grodno.krivosheev.objects.XmlObject;
 
@@ -19,19 +20,19 @@ import org.springframework.web.bind.annotation.*;
 public class ConverterController {
 
     @GetMapping(value = "/toJSON")
-    public ResponseEntity<AbstractModel> toJSON(@RequestParam(value = "source") @NotNull String source) {
+    public ResponseEntity<AbstractEntity> toJSON(@RequestParam(value = "source") @NotNull String source) {
         return responseEntity("JSON", source);
     }
 
     @GetMapping(value = "/toXML")
-    public ResponseEntity<AbstractModel> toXML(@RequestParam(value = "source") @NotNull String source) {
+    public ResponseEntity<AbstractEntity> toXML(@RequestParam(value = "source") @NotNull String source) {
         return responseEntity("XML", source);
     }
 
     @NotNull
-    private ResponseEntity<AbstractModel> responseEntity(@NotNull String type, String source) {
+    private ResponseEntity<AbstractEntity> responseEntity(@NotNull String type, String source) {
         if (source.equals("")) {
-            return new ResponseEntity<>(new ErrorModel((short) 400, "Input text empty!"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(new ErrorEntity((short) 400, "Input text empty!"), HttpStatus.BAD_REQUEST);
         }
         AbstractObject obj = null;
         try {
@@ -41,13 +42,13 @@ public class ConverterController {
                 obj = Converter.jsonToXml(new JsonObject(source));
             }
         } catch (Exception e) {
-            return new ResponseEntity<>(new ErrorModel((short) 409, e.getMessage() == null ?
+            return new ResponseEntity<>(new ErrorEntity((short) 409, e.getMessage() == null ?
                     "Input text incorrect!" :
                     e.getMessage()), HttpStatus.CONFLICT);
         }
         if (obj == null || obj.isEmpty()) {
-            return new ResponseEntity<>(new ErrorModel((short) 409, "Input text incorrect!"), HttpStatus.CONFLICT);
+            return new ResponseEntity<>(new ErrorEntity((short) 409, "Input text incorrect!"), HttpStatus.CONFLICT);
         }
-        return new ResponseEntity<>(new ConverterModel(type, obj.toString()), HttpStatus.OK);
+        return new ResponseEntity<>(new ConverterEntity(type, obj.toString()), HttpStatus.OK);
     }
 }

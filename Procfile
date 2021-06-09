@@ -1,1 +1,1 @@
-web: java -war target/converter-webapp-*.war
+web: java -jar target/converter-webapp-*.jar

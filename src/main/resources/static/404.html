@@ -9,6 +9,10 @@
         <title>Error 404</title>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
         <style>
+            :root {
+                --rgb-body-background: rgb(255, 0, 0);
+                --header-footer-background: white;
+            }
             * {
                 padding: 0;
                 margin: 0;
@@ -28,7 +32,11 @@
                 font-size: 2.5vh;
                 font-family: Georgia, serif;
                 line-height: 1;
-                background-color: red;
+                background-color: var(--rgb-body-background);
+            }
+            #bgCanvas {
+                position: fixed;
+                z-index: -1;
             }
             main {
                 flex: auto;
@@ -45,16 +53,16 @@
             header, footer {
                 flex: 0 1 auto;
                 font-weight: bold;
-                background-color: white;
+                background-color: var(--header-footer-background);
                 padding: 0.5em 1em;
             }
             .text-shadow-red {
-                text-shadow: red 0.025em 0 0, red 0 0.025em 0,
-                red -0.025em 0 0, red 0 -0.025em 0;
+                text-shadow: var(--rgb-body-background) 0.025em 0 0, var(--rgb-body-background) 0 0.025em 0,
+                    var(--rgb-body-background) -0.025em 0 0, var(--rgb-body-background) 0 -0.025em 0;
             }
             .text-shadow-white {
-                text-shadow: white 0.025em 0 0, white 0 0.025em 0,
-                white -0.025em 0 0, white 0 -0.025em 0;
+                text-shadow: var(--header-footer-background) 0.025em 0 0, var(--header-footer-background) 0 0.025em 0,
+                    var(--header-footer-background) -0.025em 0 0, var(--header-footer-background) 0 -0.025em 0;
             }
             .wrap-link {
                 text-align: center;
@@ -84,6 +92,9 @@
     </head>
 
     <body>
+        <canvas id="bgCanvas" class="preloader"></canvas>
+        <script src="scripts/events.js"></script>
+
         <header>
             <h1 class="text-shadow-red">Converter</h1>
         </header>

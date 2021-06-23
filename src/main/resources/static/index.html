@@ -10,7 +10,6 @@
         <meta name="description" content="Converter JSON, XML" />
         <link rel="canonical" href="https://convert3r.herokuapp.com/" />
         <link rel="stylesheet" href="style.css">
-        <script src="scripts/events.js"></script>
         <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
         <link rel="icon" type="image/png" sizes="24x24" href="images/icons/favicon-24x24.png">
         <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
@@ -39,9 +38,18 @@
         <meta property="og:description" content="Converter JSON, XML" />
         <meta property="og:image" content="images/icons/favicon-512x512.png" />
         <meta property="og:locale" content="en" />
+        <style>
+            .preloader {
+                background-color: var(--rgb-body-background);
+                z-index: 1 !important;
+            }
+        </style>
     </head>
 
     <body ng-controller="rootController">
+        <canvas id="bgCanvas" class="preloader"></canvas>
+        <script src="scripts/events.js"></script>
+
         <header>
              <h1 class="text-shadow-red">Converter</h1>
         </header>

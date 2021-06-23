@@ -1,5 +1,5 @@
 # Converter webapp
-`Java: 8`, `Spring Boot (Web)`
+`Java: 8`, `Spring Boot` (Web)
 
 **Build:** `maven`
 

@@ -11,7 +11,7 @@
 
 	<groupId>by.grodno.krivosheev</groupId>
 	<artifactId>converter-webapp</artifactId>
-	<version>1.1.1</version>
+	<version>1.1.2</version>
 
 	<name>converter-webapp</name>
 	<url>https://convert3r.herokuapp.com/</url>

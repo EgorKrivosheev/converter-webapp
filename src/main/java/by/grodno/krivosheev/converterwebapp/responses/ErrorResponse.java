@@ -1,9 +1,9 @@
-package by.grodno.krivosheev.converterwebapp.entities;
+package by.grodno.krivosheev.converterwebapp.responses;
 
-public class ErrorEntity extends AbstractEntity {
+public class ErrorResponse extends AbstractResponse {
     private final short codeError;
 
-    public ErrorEntity(short code, String response) {
+    public ErrorResponse(short code, String response) {
         super(response);
         this.codeError = code;
     }

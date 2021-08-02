@@ -1,9 +1,9 @@
-package by.grodno.krivosheev.converterwebapp.entities;
+package by.grodno.krivosheev.converterwebapp.responses;
 
-public class ConverterEntity extends AbstractEntity {
+public class ConverterResponse extends AbstractResponse {
     private final String typeResponse;
 
-    public ConverterEntity(String typeResponse, String response) {
+    public ConverterResponse(String typeResponse, String response) {
         super(response);
         this.typeResponse = typeResponse;
     }

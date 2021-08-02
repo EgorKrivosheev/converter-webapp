@@ -2,5 +2,5 @@
 
 const _CONVERTER_APP = angular.module("converterApp", [])
     .run(function ($rootScope) {
-        $rootScope.version = "version: 1.1.2";
+        $rootScope.version = "version: 1.1.3";
     });

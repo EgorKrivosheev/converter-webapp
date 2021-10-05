@@ -38,10 +38,13 @@ public class ConverterController {
         }
         AbstractObject obj = null;
         try {
-            if (type.equals("JSON")) {
-                obj = Converter.xmlToJson(new XmlObject(source));
-            } else if (type.equals("XML")) {
-                obj = Converter.jsonToXml(new JsonObject(source));
+            switch (type) {
+                case "JSON":
+                    obj = Converter.xmlToJson(new XmlObject(source));
+                    break;
+                case "XML":
+                    obj = Converter.jsonToXml(new JsonObject(source));
+                    break;
             }
         } catch (Exception e) {
             return new ResponseEntity<>(new ErrorResponse((short) 409, e.getMessage() == null ?

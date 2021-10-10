@@ -10,8 +10,6 @@ import by.grodno.krivosheev.core.Converter;
 import by.grodno.krivosheev.objects.JsonObject;
 import by.grodno.krivosheev.objects.XmlObject;
 
-import org.jetbrains.annotations.NotNull;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -22,17 +20,16 @@ import org.springframework.web.bind.annotation.*;
 public class ConverterController {
 
     @GetMapping(value = "/toJSON")
-    public ResponseEntity<AbstractResponse> toJSON(@RequestParam(value = "source") @NotNull String source) {
+    public ResponseEntity<AbstractResponse> toJSON(@RequestParam(value = "source") String source) {
         return responseEntity("JSON", source);
     }
 
     @GetMapping(value = "/toXML")
-    public ResponseEntity<AbstractResponse> toXML(@RequestParam(value = "source") @NotNull String source) {
+    public ResponseEntity<AbstractResponse> toXML(@RequestParam(value = "source") String source) {
         return responseEntity("XML", source);
     }
 
-    @NotNull
-    private ResponseEntity<AbstractResponse> responseEntity(@NotNull String type, String source) {
+    private ResponseEntity<AbstractResponse> responseEntity(String type, String source) {
         if (source.equals("")) {
             return new ResponseEntity<>(new ErrorResponse((short) 400, "Input text empty!"), HttpStatus.BAD_REQUEST);
         }
